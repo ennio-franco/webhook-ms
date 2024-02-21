@@ -1,0 +1,15 @@
+services:
+  
+  webhooks:
+    container_name: webhooks
+    build: .
+    ports:
+    - "3000:3000"
+    volumes:
+    - ./:/go/src/app
+    networks:
+    - developer
+
+networks:
+  developer:
+    name: developer
